@@ -1,5 +1,30 @@
 
+@font-face {
+    font-family: MostraNuovaB;
+    src: url("../fonts/Mostra Nuova AltB Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: MostraNuovaB;
+    font-weight: bold;
+    src: url("../fonts/Mostra Nuova AltB Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: MostraNuovaD;
+    src: url("../fonts/Mostra Nuova AltD Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: MostraNuovaD;
+    font-weight: bold;
+    src: url("../fonts/Mostra Nuova AltD Bold.otf") format("opentype");
+}
+
+
+
 body{
+    font-family: 'MostraNuovaB';
     padding: 0;
     margin: 0;
     height:100%;
@@ -93,23 +118,23 @@ body a:hover{
 }
 
 .eventItem{
-    width: calc(25% - 3px);
-    display:inline-block;
-    position:relative;
-    /*border-left:2px solid white;*/
-    /*border-right:2px solid white;*/
-    height:70vh;
-    text-align:center;
+    width: 24.8%;
+    display: table;
+    position: relative;
+    height: 70vh;
+    floaT: left;
+    margin-left: 3px;
 }
 
 .eventText{
-    position:absolute;
-    bottom:70px;
-    font-size:18px;
+    position: relative;
+    font-size: 18px;
     text-align: center;
-    width:100%;
-    margin:0 auto;
+    width: 90%;
     line-height: 1.3;
+    margin: 0px auto;
+    display: table-cell;
+    vertical-align: bottom;
 }
 
 .magista{
@@ -125,13 +150,14 @@ body a:hover{
 }
 
 .mediaText{
-    position:absolute;
-    bottom:40px;
-    font-size:18px; 
+    position: relative;
+    font-size: 18px;
     text-align: center;
-    width:100%;
-    margin:0 auto;
+    width: 90%;
     line-height: 1.3;
+    margin: 0px auto;
+    display: table-cell;
+    vertical-align: bottom;
 }
 
 #one.eventItem {
@@ -194,12 +220,12 @@ body a:hover{
 
 
 .mediaItem{
-    width: calc(25% - 3px);
-    display:inline-block;
-    position:relative;
-    /*border-left:2px solid white;*/
-    /*border-right:2px solid white;*/
-    height:70vh;
+    width: 24.8%;
+    display: table;
+    position: relative;
+    height: 70vh;
+    floaT: left;
+    margin-left: 3px;
 }
 
 #one.mediaItem {

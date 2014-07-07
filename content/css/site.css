@@ -112,6 +112,10 @@ video#bgvid {
 }
 
 #aboutUsMenuContainer{
+    
+}
+
+.welcomeSlideContentContainer{
     opacity:0;
 }
 
@@ -439,13 +443,13 @@ video#bgvid {
     position:relative; 
     width:100%;
     height:0;
-    background-image: url('../../content/images/event/event1hover.png') no-repeat center center;
-    background-image: url('../../content/images/event/event2hover.png') no-repeat center center;
-    background-image: url('../../content/images/event/event3hover.png') no-repeat center center;
-    background-image: url('../../content/images/event/event4hover.png') no-repeat center center;
+    background: url('../../content/images/event/event1hover.png') no-repeat center center;
+    background: url('../../content/images/event/event2hover.png') no-repeat center center;
+    background: url('../../content/images/event/event3hover.png') no-repeat center center;
+    background: url('../../content/images/event/event4hover.png') no-repeat center center;
 
-    background-image: url('../../content/images/media/media1hover.png')  no-repeat center center;
-    background-image: url('../../content/images/media/media2hover.png')  no-repeat center center;
-    background-image: url('../../content/images/media/media3hover.png')  no-repeat center center;
-    background-image: url('../../content/images/media/media4hover.png')  no-repeat center center;
+    background: url('../../content/images/media/media1hover.png')  no-repeat center center;
+    background: url('../../content/images/media/media2hover.png')  no-repeat center center;
+    background: url('../../content/images/media/media3hover.png')  no-repeat center center;
+    background: url('../../content/images/media/media4hover.png')  no-repeat center center;
 }

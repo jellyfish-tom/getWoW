@@ -75,11 +75,11 @@ and open the template in the editor.
                 });      
                 
                 aboutUsScene_OpMaximilization.on("leave", function (event) {
-                        //$('#aboutUsMenuContainer').css('opacity', 0);
+//                        $('#aboutUsMenuContainer').css('opacity', 0);
                 });
                 
                 aboutUsScene_OpMaximilization.on("progress", function (event) {
-                        $('#aboutUsMenuContainer').css('opacity', event.progress);
+                        $('.welcomeSlideContentContainer').css('opacity', event.progress);
                 });
                 
                 var aboutUsScene_OpMinimalization = new ScrollScene({
@@ -91,11 +91,11 @@ and open the template in the editor.
                 });      
                 
                 aboutUsScene_OpMinimalization.on("leave", function (event) {
-                        $('#aboutUsMenuContainer').css('opacity', 0);
+//                        $('#aboutUsMenuContainer').css('opacity', 0);
                 });
                 
                 aboutUsScene_OpMinimalization.on("progress", function (event) {
-                        $('#aboutUsMenuContainer').css('opacity', 1 - event.progress);
+                        $('.welcomeSlideContentContainer').css('opacity', 1 - event.progress);
                 });
                 
                 
@@ -184,8 +184,19 @@ and open the template in the editor.
                         mediaScene_OpMaximalization,
                         mediaScene_OpMinimalization
                     ]);
-                
+                    
+                $(".scroll").on("click", function (event) {
+                    event.preventDefault ? event.preventDefault() : event.returnValue = false;
+                    var target = $(this).attr("href");
+                    var offset = $(this).attr('data-offset')
+                    $("html, body").stop().animate({
+                            scrollLeft: $(target).offset().left,
+                            scrollTop: $(target).offset().top - offset
+                    }, 1200);
+                });
             })
+            //class='naviOffer scroll' data-offset='280'
+            
             
         </script>
     </head>
@@ -202,10 +213,10 @@ and open the template in the editor.
                 <div class="menuContainer" id="aboutUsMenuContainer">
                     <img src="content/images/menus/menuOnas.png" class="menuAboutUsImg"/>
                     <ul class="menu" id="aboutUsMenu">
-                    <li class="bold"><a href="#aboutUs">O NAS</a></li>
-                    <li><a href="#caseStudiesEvent">EVENT</a></li>
-                    <li><a href="#caseStudiesMedia">MEDIA</a></li>
-                    <li><a href="#contactUs">KONTAKT</a></li>
+                    <li class="bold"><a href="#aboutUs" class='scroll' data-offset='0'>O NAS</a></li>
+                    <li><a href="#caseStudiesEvent" class='scroll' data-offset='280'>EVENT</a></li>
+                    <li><a href="#caseStudiesMedia" class='scroll' data-offset='145'>MEDIA</a></li>
+                    <li><a href="#contactUs" class='scroll' data-offset='0'>KONTAKT</a></li>
                     </ul>
                 </div>
                 <div id='aboutUsHeader'>
@@ -227,36 +238,39 @@ and open the template in the editor.
             <div class="menuContainer" id="eventMenuContainer">
                 <img src="content/images/menus/menuEvent.png" class="menuAboutUsImg"/>
                 <ul class="menu" id="eventMenu">
-                    <li><a href="#aboutUs">O NAS</a></li>
-                    <li class="bold"><a href="#caseStudiesEvent">EVENT</a></li>
-                    <li><a href="#caseStudiesMedia">MEDIA</a></li>
-                    <li><a href="#contactUs">KONTAKT</a></li>
+                    <li><a href="#aboutUs" class='scroll' data-offset='0'>O NAS</a></li>
+                    <li class='bold'><a href="#caseStudiesEvent" class='scroll' data-offset='280'>EVENT</a></li>
+                    <li><a href="#caseStudiesMedia" class='scroll' data-offset='145'>MEDIA</a></li>
+                    <li><a href="#contactUs" class='scroll' data-offset='0'>KONTAKT</a></li>
                 </ul>
             </div>
             <a class="fancybox vimeo" href="http://player.vimeo.com/video/99782786" target="blank">
             <div class="eventItem" id="one">
                 <div class="eventTextContainer">
-                    <span class="eventHeader">Bonobo Band Live - relacja z koncertu</span><br/>
-                    Data: 16.06.2013 r. /  ESKULAP / Poznań
-                    Organizator: Automatik & 5am Artists
+                   <span class="eventHeader">MAGISTA TOWER</span><br/>
+                        Trzy sesje treningowe w trzech różnych stylach, prowadzone przez najlepsze trenerki i 
+                        ambasadorki Nike Training Club.<br/>
+                        Data: 17.05 2014 r. / SOHO Factory / Warszawa
                 </div>
             </div>
             </a>
             <a class="fancybox vimeo" href="http://player.vimeo.com/video/99772237" target="blank">
                 <div class="eventItem middleItem" id="two">
                     <div class="eventTextContainer">
-                        <span class="eventHeader">FORM B</span><br/>
-                        Eksperyment audiowizualny badający przestrzeń i formę ją wypełniającą.
-                        To jeden z przykładów animacji, których używamy do mappingu.
+                        <span class="eventHeader">NIKE TRAINING CLUB - TrzyMaj z NTC</span><br/>
+                        Trzy sesje treningowe w trzech różnych stylach, 
+                        prowadzone przez najlepsze trenerki i ambasadorki Nike Training Club.<br/>
+                        Data: 17.05 2014 r. / SOHO Factory / Warszawa
                     </div>
                 </div>
             </a>
             <a class="fancybox vimeo" href="http://player.vimeo.com/video/99772238" target="blank">
                 <div class="eventItem middleItem" id="three">
                     <div class="eventTextContainer">
-                        <span class="eventHeader">XX Recolected- Instalacja multimedialna</span><br/>
-                        Instalacje można rozpatrywać jak swoistą infografikę ilustrującą położenie człowieka w XX wieku.
-                        Łącząc animacje, mapping oraz rzeźby kinetyczne chcieliśmy pokazać wielowarstwowość i potencjał nowych mediów.
+                        <span class="eventHeader">Magista Tower Mapping – making off</span><br/>
+                        Proces przygotowani wielkoformatowej wizualizacji w technice mappingu 3D.<br/>
+                        Projekt zrealizowany dla firmy NIKE.<br/>
+                        Data: 12.04.2014 r. / Warszawa
                     </div>
                 </div>
             </a>
@@ -264,9 +278,9 @@ and open the template in the editor.
                 <div class="eventItem middleItem" id="four">
                     <div class="eventTextContainer">
                         <div class="eventText">
-                            <span class="eventHeader">Villa Magnolia is Dancing</span><br/>
-                            Spot promujący jedno  z serii stylizowanych  eventów muzycznych,<br/> 
-                            które miały miejsce w Villi Magnolia w roku 2013/2014.
+                            <span class="eventHeader">NIKE „Zwycięzca Zostaje”</span><br/>
+                            10 turniejów piłkarskich w ramach kampanii „Podejmij Ryzyko”<br/>
+                            Data: 28.04-10.05. 2014 / Warszawa 
                         </div>
                     </div>
                 </div>
@@ -277,39 +291,40 @@ and open the template in the editor.
             <div class="menuContainer" id="mediaMenuContainer">
                 <img src="content/images/menus/menuMedia.png" class="menuAboutUsImg"/>
                 <ul class="menu" id="mediaMenu">
-                    <li><a href="#aboutUs">O NAS</a></li>
-                    <li><a href="#caseStudiesEvent">EVENT</a></li>
-                    <li class="bold"><a href="#caseStudiesMedia">MEDIA</a></li>
-                    <li><a href="#contactUs">KONTAKT</a></li>
+                    <li><a href="#aboutUs" class='scroll' data-offset='0'>O NAS</a></li>
+                    <li><a href="#caseStudiesEvent" class='scroll' data-offset='250'>EVENT</a></li>
+                    <li class='bold'><a href="#caseStudiesMedia" class='scroll' data-offset='145'>MEDIA</a></li>
+                    <li><a href="#contactUs" class='scroll' data-offset='0'>KONTAKT</a></li>
                 </ul>
             </div>
             <a class="fancybox vimeo" href="http://player.vimeo.com/video/99066636" target="blank">
                 <div class="mediaItem" id="one">
                     <div class="mediaTextContainer">
-                        <span class="eventHeader">MAGISTA TOWER</span><br/>
-                        Trzy sesje treningowe w trzech różnych stylach, prowadzone przez najlepsze trenerki i 
-                        ambasadorki Nike Training Club.<br/>
-                        Data: 17.05 2014 r. / SOHO Factory / Warszawa
+                        <span class="eventHeader">Bonobo Band Live - relacja z koncertu</span><br/>
+                        Data: 16.06.2013 r. /  ESKULAP / Poznań
+                        Organizator: Automatik & 5am Artists
+                        
                     </div>
                 </div>
             </a>
             <a class="fancybox vimeo" href="http://player.vimeo.com/video/99782786" target="blank">
                 <div class="mediaItem middleItem" id="two">
                     <div class="mediaTextContainer">        <!--COPY OK-->
-                        <span class="eventHeader">NIKE TRAINING CLUB - TrzyMaj z NTC</span><br/>
-                        Trzy sesje treningowe w trzech różnych stylach, 
-                        prowadzone przez najlepsze trenerki i ambasadorki Nike Training Club.<br/>
-                        Data: 17.05 2014 r. / SOHO Factory / Warszawa
+                        <span class="eventHeader">FORM B</span><br/>
+                        Eksperyment audiowizualny badający przestrzeń i formę ją wypełniającą.
+                        To jeden z przykładów animacji, których używamy do mappingu.
+                        
                     </div>
                 </div>
             </a>
             <a class="fancybox vimeo" href="http://player.vimeo.com/video/99769373" target="blank">
                 <div class="mediaItem middleItem" id="three">
                     <div class="mediaTextContainer">        <!--COPY OK-->
-                        <span class="eventHeader">Magista Tower Mapping – making off</span><br/>
-                        Proces przygotowani wielkoformatowej wizualizacji w technice mappingu 3D.<br/>
-                        Projekt zrealizowany dla firmy NIKE.<br/>
-                        Data: 12.04.2014 r. / Warszawa
+                        <span class="eventHeader">XX Recolected- Instalacja multimedialna</span><br/>
+                        Instalacje można rozpatrywać jak swoistą infografikę ilustrującą położenie człowieka w XX wieku.
+                        Łącząc animacje, mapping oraz rzeźby kinetyczne chcieliśmy pokazać wielowarstwowość i potencjał nowych mediów.
+                        
+                       
                     </div>
                 </div>
             </a>
@@ -317,9 +332,10 @@ and open the template in the editor.
                 <div class="mediaItem middleItem" id="four">
                     <div class="mediaTextContainer">
                         <div class="mediaText">
-                            <span class="eventHeader">NIKE „Zwycięzca Zostaje”</span><br/>
-                            10 turniejów piłkarskich w ramach kampanii „Podejmij Ryzyko”<br/>
-                            Data: 28.04-10.05. 2014 / Warszawa 
+                            
+                            <span class="eventHeader">Villa Magnolia is Dancing</span><br/>
+                            Spot promujący jedno  z serii stylizowanych  eventów muzycznych,<br/> 
+                            które miały miejsce w Villi Magnolia w roku 2013/2014.
                         </div>
                     </div>
                 </div>

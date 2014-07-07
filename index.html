@@ -25,8 +25,11 @@ and open the template in the editor.
         <link rel="stylesheet" href="content/fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
         <script type="text/javascript" src="content/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
         
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.12.1/TweenMax.min.js"></script>
         <script type="text/javascript" src="content/js/jquery.videoBG.js"></script>
+        <script type="text/javascript" src="content/js/jquery.scrollmagic.js"></script>
         <link href="content/css/site.css" rel="stylesheet" type="text/css">
+        
 
         <script>
             $(document).ready(function() {
@@ -45,6 +48,145 @@ and open the template in the editor.
                       fitToView : false
                 });
             });
+            
+            function CalculateDuration(pxValue, percentage, offSet){
+                var offSet = offSet != null ? offSet : 0;
+                return (pxValue.slice(0, -2) * percentage) + offSet + 'px'
+            }
+            
+            $(function(){
+                
+                //OpacityMaximizationSpeed = OMaxS
+                //OpacityMinimalizationSpeed = OMminS
+                
+                var controller = new ScrollMagic();
+                
+                //============ABOUT US SCENE================
+                var welcomeMenuOMaxS = 1;
+                var welcomeMenuOMinS = 0.2;
+                var welcomeOffset = 80;
+                
+                var aboutUsScene_OpMaximilization = new ScrollScene({
+                        duration: CalculateDuration($('#aboutUs').css('height'), welcomeMenuOMaxS, welcomeOffset),
+                        offset: welcomeOffset,
+                        triggerElement: '#aboutUsMenuContainer',
+                        triggerHook: "onEnter",
+                        reverse: true
+                });      
+                
+                aboutUsScene_OpMaximilization.on("leave", function (event) {
+                        //$('#aboutUsMenuContainer').css('opacity', 0);
+                });
+                
+                aboutUsScene_OpMaximilization.on("progress", function (event) {
+                        $('#aboutUsMenuContainer').css('opacity', event.progress);
+                });
+                
+                var aboutUsScene_OpMinimalization = new ScrollScene({
+                        duration: CalculateDuration($('#aboutUs').css('height'), welcomeMenuOMinS),
+                        offset: CalculateDuration($('#aboutUs').css('height'), welcomeMenuOMaxS),
+                        triggerElement: '#aboutUsMenuContainer',
+                        triggerHook: "onEnter",
+                        reverse: true
+                });      
+                
+                aboutUsScene_OpMinimalization.on("leave", function (event) {
+                        $('#aboutUsMenuContainer').css('opacity', 0);
+                });
+                
+                aboutUsScene_OpMinimalization.on("progress", function (event) {
+                        $('#aboutUsMenuContainer').css('opacity', 1 - event.progress);
+                });
+                
+                
+                
+                //============EVENT SCENE================
+                var eventMenuOMaxS = 1;
+                var eventMenuOMinS = 0.3;
+                var eventOffset = 100;
+                
+                var eventScene_OpMaximalization = new ScrollScene({
+                        duration: CalculateDuration($('#caseStudiesEvent').css('height'), eventMenuOMaxS, eventOffset),
+                        offset: eventOffset,
+                        triggerElement: '#eventMenuContainer',
+                        triggerHook: "onEnter",
+                        reverse: true
+                });  
+                
+                eventScene_OpMaximalization.on("leave", function (event) {
+                        $('#eventMenuContainer').css('opacity', 0);
+                });
+                
+                eventScene_OpMaximalization.on("progress", function (event) {
+                        $('#eventMenuContainer').css('opacity', event.progress);
+                });
+                
+                var eventScene_OpMinimalization = new ScrollScene({
+                        duration: CalculateDuration($('#caseStudiesEvent').css('height'), eventMenuOMinS),
+                        offset: CalculateDuration($('#caseStudiesEvent').css('height'), eventMenuOMaxS),
+                        triggerElement: '#eventMenuContainer',
+                        triggerHook: "onEnter",
+                        reverse: true
+                });  
+                
+                eventScene_OpMinimalization.on("leave", function (event) {
+                        $('#eventMenuContainer').css('opacity', 0);
+                });
+                
+                eventScene_OpMinimalization.on("progress", function (event) {
+                        $('#eventMenuContainer').css('opacity', 1 - event.progress);
+                });
+                
+                
+                //=========MEDIA SCENE============
+                
+                var mediaMenuOMaxS = 1.2;
+                var mediaMenuOMinS = 0.3;
+                var mediaOffset = 60;
+                
+                var mediaScene_OpMaximalization = new ScrollScene({
+                        duration: CalculateDuration($('#caseStudiesMedia').css('height'), mediaMenuOMaxS, mediaOffset),
+                        offset: mediaOffset,
+                        triggerElement: '#mediaMenuContainer',
+                        triggerHook: "onEnter",
+                        reverse: true
+                });  
+                
+                mediaScene_OpMaximalization.on("leave", function (event) {
+                        $('#mediaMenuContainer').css('opacity', 0);
+                });
+                
+                mediaScene_OpMaximalization.on("progress", function (event) {
+                        $('#mediaMenuContainer').css('opacity', event.progress);
+                });
+                
+                var mediaScene_OpMinimalization = new ScrollScene({
+                        duration: CalculateDuration($('#caseStudiesMedia').css('height'), mediaMenuOMinS),
+                        offset: CalculateDuration($('#caseStudiesMedia').css('height'), mediaMenuOMaxS),
+                        triggerElement: '#mediaMenuContainer',
+                        triggerHook: "onEnter",
+                        reverse: true
+                });  
+                
+                mediaScene_OpMinimalization.on("leave", function (event) {
+                        $('#mediaMenuContainer').css('opacity', 0);
+                });
+                
+                mediaScene_OpMinimalization.on("progress", function (event) {
+                        $('#mediaMenuContainer').css('opacity', 1 - event.progress);
+                });
+                
+                controller.addScene([
+                        aboutUsScene_OpMaximilization, 
+                        aboutUsScene_OpMinimalization, 
+                        eventScene_OpMaximalization,
+                        eventScene_OpMinimalization,
+                        mediaScene_OpMaximalization,
+                        mediaScene_OpMinimalization
+                    ]);
+                
+            })
+            
         </script>
     </head>
     <body>
@@ -57,7 +199,7 @@ and open the template in the editor.
         </div>
         <div class="slide_container" id="aboutUs">
             <div class="welcomeSlideContentContainer">
-                <div class="menuContainer">
+                <div class="menuContainer" id="aboutUsMenuContainer">
                     <img src="content/images/menus/menuOnas.png" class="menuAboutUsImg"/>
                     <ul class="menu" id="aboutUsMenu">
                     <li class="bold"><a href="#aboutUs">O NAS</a></li>
@@ -82,7 +224,7 @@ and open the template in the editor.
             </div>
         </div>
         <div class="slide_container" id="caseStudiesEvent">
-            <div class="menuContainer">
+            <div class="menuContainer" id="eventMenuContainer">
                 <img src="content/images/menus/menuEvent.png" class="menuAboutUsImg"/>
                 <ul class="menu" id="eventMenu">
                     <li><a href="#aboutUs">O NAS</a></li>
@@ -91,43 +233,40 @@ and open the template in the editor.
                     <li><a href="#contactUs">KONTAKT</a></li>
                 </ul>
             </div>
-            <a class="fancybox vimeo" href="http://player.vimeo.com/video/59513257" target="blank">
+            <a class="fancybox vimeo" href="http://player.vimeo.com/video/99782786" target="blank">
             <div class="eventItem" id="one">
                 <div class="eventTextContainer">
-                    <span class="eventHeader">MAGISTA TOWER</span><br/>
-                    Trzy sesje treningowe w trzech różnych stylach, 
-                    prowadzone przez najlepsze trenerki i ambasadorki Nike Training Club.<br/>
-                    Data: 17.05 2014 r. / SOHO Factory / Warszawa
+                    <span class="eventHeader">Bonobo Band Live - relacja z koncertu</span><br/>
+                    Data: 16.06.2013 r. /  ESKULAP / Poznań
+                    Organizator: Automatik & 5am Artists
                 </div>
             </div>
             </a>
-            <a class="fancybox vimeo" href="http://player.vimeo.com/video/99066636" target="blank">
+            <a class="fancybox vimeo" href="http://player.vimeo.com/video/99772237" target="blank">
                 <div class="eventItem middleItem" id="two">
                     <div class="eventTextContainer">
-                        <span class="eventHeader">NIKE TRAINING CLUG - TrzyMaj z NTC</span><br/>
-                        Trzy sesje treningowe w trzech różnych stylach, 
-                        prowadzone przez najlepsze trenerki i ambasadorki Nike Training Club.<br/>
-                        Data: 17.05 2014 r. / SOHO Factory / Warszawa
+                        <span class="eventHeader">FORM B</span><br/>
+                        Eksperyment audiowizualny badający przestrzeń i formę ją wypełniającą.
+                        To jeden z przykładów animacji, których używamy do mappingu.
                     </div>
                 </div>
             </a>
-            <a class="fancybox vimeo" href="http://player.vimeo.com/video/99066636" target="blank">
+            <a class="fancybox vimeo" href="http://player.vimeo.com/video/99772238" target="blank">
                 <div class="eventItem middleItem" id="three">
                     <div class="eventTextContainer">
-                        <span class="eventHeader">Magista Tower Mapping - making off</span><br/>
-                        Proces przygotowani wielkoformatowej wizualizacji w technice mappingu 3D.<br/>
-                        Projekt zrealizowany dla firmy NIKE.<br>
-                        Data: 12.04.2014 r. / Warszawa
+                        <span class="eventHeader">XX Recolected- Instalacja multimedialna</span><br/>
+                        Instalacje można rozpatrywać jak swoistą infografikę ilustrującą położenie człowieka w XX wieku.
+                        Łącząc animacje, mapping oraz rzeźby kinetyczne chcieliśmy pokazać wielowarstwowość i potencjał nowych mediów.
                     </div>
                 </div>
             </a>
-            <a class="fancybox vimeo" href="http://player.vimeo.com/video/99859167" target="blank">
+            <a class="fancybox vimeo" href="http://player.vimeo.com/video/99772239" target="blank">
                 <div class="eventItem middleItem" id="four">
                     <div class="eventTextContainer">
                         <div class="eventText">
-                            <span class="eventHeader">NIKE "Zwycięzca Zostaje"</span><br/>
-                            10 turniejów piłkarskich w ramach kampanii „Podejmij Ryzyko”<br/>
-                            Data: 28.04-10.05. 2014 / Warszawa 
+                            <span class="eventHeader">Villa Magnolia is Dancing</span><br/>
+                            Spot promujący jedno  z serii stylizowanych  eventów muzycznych,<br/> 
+                            które miały miejsce w Villi Magnolia w roku 2013/2014.
                         </div>
                     </div>
                 </div>
@@ -135,7 +274,7 @@ and open the template in the editor.
             <div class="clear"></div>
         </div>
         <div class="portfolio_slide_container" id="caseStudiesMedia">
-            <div class="menuContainer">
+            <div class="menuContainer" id="mediaMenuContainer">
                 <img src="content/images/menus/menuMedia.png" class="menuAboutUsImg"/>
                 <ul class="menu" id="mediaMenu">
                     <li><a href="#aboutUs">O NAS</a></li>
@@ -156,7 +295,7 @@ and open the template in the editor.
             </a>
             <a class="fancybox vimeo" href="http://player.vimeo.com/video/99782786" target="blank">
                 <div class="mediaItem middleItem" id="two">
-                    <div class="mediaTextContainer">
+                    <div class="mediaTextContainer">        <!--COPY OK-->
                         <span class="eventHeader">NIKE TRAINING CLUB - TrzyMaj z NTC</span><br/>
                         Trzy sesje treningowe w trzech różnych stylach, 
                         prowadzone przez najlepsze trenerki i ambasadorki Nike Training Club.<br/>
@@ -164,9 +303,9 @@ and open the template in the editor.
                     </div>
                 </div>
             </a>
-            <a class="fancybox vimeo" href="http://player.vimeo.com/video/99772238" target="blank">
+            <a class="fancybox vimeo" href="http://player.vimeo.com/video/99769373" target="blank">
                 <div class="mediaItem middleItem" id="three">
-                    <div class="mediaTextContainer">
+                    <div class="mediaTextContainer">        <!--COPY OK-->
                         <span class="eventHeader">Magista Tower Mapping – making off</span><br/>
                         Proces przygotowani wielkoformatowej wizualizacji w technice mappingu 3D.<br/>
                         Projekt zrealizowany dla firmy NIKE.<br/>
@@ -174,7 +313,7 @@ and open the template in the editor.
                     </div>
                 </div>
             </a>
-            <a class="fancybox vimeo" href="http://player.vimeo.com/video/99772239" target="blank">
+            <a class="fancybox vimeo" href="http://player.vimeo.com/video/99772236" target="blank">
                 <div class="mediaItem middleItem" id="four">
                     <div class="mediaTextContainer">
                         <div class="mediaText">
@@ -211,5 +350,6 @@ and open the template in the editor.
             </div>
             
         </div>
+        <div id="imagesPreloader"></div>
     </body>
 </html>

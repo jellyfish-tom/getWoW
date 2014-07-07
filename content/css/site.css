@@ -191,6 +191,7 @@ video#bgvid {
 }
 
 .eventItem{
+    background: rgba(0,0,0,0.7);
     width: calc(25% - 4px);
     display:inline-block;
     position:relative;
@@ -251,28 +252,97 @@ video#bgvid {
 }
 
 #one.eventItem {
-    background: url('../../content/images/event/event1.png')  no-repeat center center;
      -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
+#one.eventItem:after {
+    background: url('../../content/images/event/event1hover.png') no-repeat center center;
+    opacity: 0.5;
+    width:100%;
+    height:auto;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 #two.eventItem {
-    background: url('../../content/images/event/event2.png')  no-repeat center center;
+     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#two.eventItem:after {
+    background: url('../../content/images/event/event2hover.png') no-repeat center center;
+    opacity: 0.5;
+    width:100%;
+    height:auto;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
      -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 #three.eventItem {
-    background: url('../../content/images/event/event3.png')  no-repeat center center;
+     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#three.eventItem:after {
+    background: url('../../content/images/event/event3hover.png') no-repeat center center;
+    opacity: 0.5;
+    width:100%;
+    height:auto;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
      -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 #four.eventItem {
-    background: url('../../content/images/event/event4.png')  no-repeat center center;
+     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#four.eventItem:after {
+    background: url('../../content/images/event/event4hover.png') no-repeat center center;
+    opacity: 0.5;
+    width:100%;
+    height:auto;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
      -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -310,6 +380,7 @@ video#bgvid {
 
 
 .mediaItem{
+    background: rgba(0,0,0,0.7);
     width: calc(25% - 4px);
     float:left;
     display:inline-block;
@@ -321,28 +392,97 @@ video#bgvid {
 }
 
 #one.mediaItem {
-    background: url('../../content/images/media/media1.png')  no-repeat center center;
      -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
+#one.mediaItem:after {
+    background: url('../../content/images/media/media1hover.png') no-repeat center center;
+    opacity: 0.5;
+    width:100%;
+    height:auto;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 #two.mediaItem {
-    background: url('../../content/images/media/media2.png')  no-repeat center center;
+     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#two.mediaItem:after {
+    background: url('../../content/images/media/media2hover.png') no-repeat center center;
+    opacity: 0.5;
+    width:100%;
+    height:auto;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
      -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 #three.mediaItem {
-    background: url('../../content/images/media/media3.png')  no-repeat center center;
+     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#three.mediaItem:after {
+    background: url('../../content/images/media/media3hover.png') no-repeat center center;
+    opacity: 0.5;
+    width:100%;
+    height:auto;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
      -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 #four.mediaItem {
-    background: url('../../content/images/media/media4.png')  no-repeat center center;
+     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#four.mediaItem:after {
+    background: url('../../content/images/media/media4hover.png') no-repeat center center;
+    opacity: 0.5;
+    width:100%;
+    height:auto;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
      -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

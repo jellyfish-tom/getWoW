@@ -27,6 +27,7 @@ body{
     margin: 0;
     height:100%;
     color:white;
+    text-shadow: 0.03em 0.03em #333;
 }
 
 body a{
@@ -137,7 +138,7 @@ video#bgvid {
 
 .menu > li{
     display:inline;
-    font-size:18px;
+    font-size:20px;
     margin:0 27.5px;
 }
 
@@ -148,14 +149,16 @@ video#bgvid {
     width:500px;
     margin-top: 80px;
     margin-bottom:25px;
+    text-shadow: 0.03em 0.03em #333;
 }
 
 #aboutUsText{
-    font-size:14px;
-    width: 850px;
+    font-size: 16px;
+    width: 950px;
     line-height: 1.7;
-    margin: 0 auto;
+    margin: -10px auto;
     text-align: justify;
+    text-shadow: 0.1em 0.1em #333;
 }
 
 #caseStudiesMedia > .menuContainer, #caseStudiesEvent > .menuContainer{
@@ -206,13 +209,14 @@ video#bgvid {
     background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
     bottom: 70px;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     width: 100%;
     margin: 0px auto;
     line-height: 1.3;
-    padding: 5px 0px;
-    height: 130px;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    height: 125px;
     display: table;
 }
 
@@ -223,7 +227,7 @@ video#bgvid {
 }
 
 .eventHeader{
-    font-size:22px;
+    font-size:20px;
     font-weight: bold;
 }
 
@@ -231,13 +235,14 @@ video#bgvid {
     background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
     bottom: 70px;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     width: 100%;
     margin: 0px auto;
     line-height: 1.3;
-    padding: 5px 0px;
-    height: 130px;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    height: 110px;
     display: table;
 }
 

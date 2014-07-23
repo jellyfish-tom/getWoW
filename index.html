@@ -8,6 +8,7 @@ and open the template in the editor.
     <head>
          <title>GetWoW</title>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=9">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />-->
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -79,7 +80,7 @@ and open the template in the editor.
                 });
                 
                 aboutUsScene_OpMaximilization.on("progress", function (event) {
-                        $('.welcomeSlideContentContainer').css('opacity', event.progress);
+                        $('.welcomeSlideContentContainer').css('opacity', event.progress * 2);
                 });
                 
                 var aboutUsScene_OpMinimalization = new ScrollScene({
@@ -94,10 +95,10 @@ and open the template in the editor.
 //                        $('#aboutUsMenuContainer').css('opacity', 0);
                 });
                 
-                aboutUsScene_OpMinimalization.on("progress", function (event) {
-                        $('.welcomeSlideContentContainer').css('opacity', 1 - event.progress);
-                });
-                
+//                aboutUsScene_OpMinimalization.on("progress", function (event) {
+//                        $('.welcomeSlideContentContainer').css('opacity', 1 - event.progress);
+//                });
+//                
                 
                 
                 //============EVENT SCENE================
@@ -133,9 +134,9 @@ and open the template in the editor.
                         $('#eventMenuContainer').css('opacity', 0);
                 });
                 
-                eventScene_OpMinimalization.on("progress", function (event) {
-                        $('#eventMenuContainer').css('opacity', 1 - event.progress);
-                });
+//                eventScene_OpMinimalization.on("progress", function (event) {
+//                        $('#eventMenuContainer').css('opacity', 1 - event.progress);
+//                });
                 
                 
                 //=========MEDIA SCENE============
@@ -172,9 +173,9 @@ and open the template in the editor.
                         $('#mediaMenuContainer').css('opacity', 0);
                 });
                 
-                mediaScene_OpMinimalization.on("progress", function (event) {
-                        $('#mediaMenuContainer').css('opacity', 1 - event.progress);
-                });
+//                mediaScene_OpMinimalization.on("progress", function (event) {
+//                        $('#mediaMenuContainer').css('opacity', 1 - event.progress);
+//                });
                 
                 controller.addScene([
                         aboutUsScene_OpMaximilization, 
@@ -202,12 +203,15 @@ and open the template in the editor.
     </head>
     <body>
         <div class="slide_container" id="welcomeSlide">
-            <video autoplay loop poster="polina.jpg" id="bgvid">
+            <video autoplay loop poster="staticMainBcg.png" id="bgvid">
                 <source src="content/videos/MAIN_2.webm" type="video/webm">
                 <source src="content/videos/MAIN_2.mp4" type="video/mp4">
                 <source src="content/videos/MAIN_2.ogv" type="video/ogg">
             </video>
              <img src="content/images/logo.png" class="mainLogo"/>
+             <a href="http://vimeo.com/getwow" target="_blank">
+                <img src="content/images/vimeo2.png" id="vimeoIcon"/>
+             </a>
         </div>
         <div class="slide_container" id="aboutUs">
             <div class="welcomeSlideContentContainer">
@@ -231,7 +235,7 @@ and open the template in the editor.
                     Na stałe współpracujemy z grupą doświadczonych producentów, filmowców i animatorów, co daje nam gwarancję najwyższej jakości usług.  
                     Stawiamy na innowację,  wyznaczając nowe trendy w produkcji i obsłudze wydarzeń. Kreatywny scenariusz i nowatorskie techniki produkcji  stanowią  podstawę każdego projektu. 
                     Lubimy wyzwania i podchodzimy do nich bardzo ambicjonalnie. 
-                    Bez względu na utrudnienia i  skale trudności efekt WOW gwarantowany.
+                    Bez względu na skale trudności efekt WOW gwarantowany.
                 </div>
                 <div class="clear"></div>
             </div>
@@ -246,33 +250,39 @@ and open the template in the editor.
                     <li><a href="#contactUs" class='scroll' data-offset='0'>KONTAKT</a></li>
                 </ul>
             </div>
-            <a class="fancybox vimeo" href="http://player.vimeo.com/video/99782786" target="blank">
+            <a class="fancybox vimeo" href="http://player.vimeo.com/video/99859166" target="blank">
             <div class="eventItem" id="one">
                 <div class="eventTextContainer">
-                   <span class="eventHeader">MAGISTA TOWER</span><br/>
-                        Turniej piłkarski na dachu Spectrum Tower.<br/>
-                        Ogólnopolski finał kampanii „Podejmij Ryzyko” <br/>
-                        Data: 21.05.2014 r. / Warszawa<br/>
+                        <div class="eventText">
+                            <span class="eventHeader">MAGISTA TOWER<br/> making of</span><br/>
+                            Turniej piłkarski na dachu Spectrum Tower.<br/>
+                            Ogólnopolski finał kampanii „Podejmij Ryzyko” <br/>
+                            Data: 21.05.2014 r. / Warszawa<br/>
+                        </div>
                 </div>
             </div>
             </a>
-            <a class="fancybox vimeo" href="http://player.vimeo.com/video/99772237" target="blank">
+            <a class="fancybox vimeo" href="http://player.vimeo.com/video/100301102" target="blank">
                 <div class="eventItem middleItem" id="two">
                     <div class="eventTextContainer">
-                        <span class="eventHeader">NIKE TRAINING CLUB</span><br/>
-                        Trzy sesje treningowe w trzech różnych stylach, 
-                        prowadzone przez najlepsze trenerki i ambasadorki Nike Training Club.<br/>
-                        Data: 17.05 2014 r. / SOHO Factory / Warszawa
+                        <div class="eventText">
+                            <span class="eventHeader">NIKE TRAINING CLUB<br/> making of</span><br/>
+                            Trzy sesje treningowe prowadzone, 
+                            przez najlepsze trenerki i ambasadorki Nike Training Club.<br/>
+                            Data: 15.05 2014 r. / SOHO Factory / Warszawa
+                        </div>
                     </div>
                 </div>
             </a>
             <a class="fancybox vimeo" href="http://player.vimeo.com/video/99769373" target="blank">
                 <div class="eventItem middleItem" id="three">
                     <div class="eventTextContainer">
-                        <span class="eventHeader">MAGISTA TOWER MAPPING<br/> making of</span><br/>
-                        Proces przygotowani wielkoformatowej wizualizacji w technice mappingu 3D.<br/>
-                        Projekt zrealizowany dla firmy NIKE.<br/>
-                        Data: 12.04.2014 r. / Warszawa
+                        <div class="eventText">
+                            <span class="eventHeader">MAGISTA TOWER MAPPING<br/> making of</span><br/>
+                            Proces przygotowani wielkoformatowej wizualizacji w technice mappingu 3D.<br/>
+                            Projekt zrealizowany dla firmy NIKE.<br/>
+                            Data: 12.04.2014 r. / Warszawa
+                        </div>
                     </div>
                 </div>
             </a>
@@ -301,30 +311,34 @@ and open the template in the editor.
             </div>
             <a class="fancybox vimeo" href="http://player.vimeo.com/video/99782786" target="blank">
                 <div class="mediaItem" id="one">
-                    <div class="mediaTextContainer">
-                        <span class="eventHeader">BONOBO BAND LIVE <br/> relacja z koncertu</span><br/>
-                        Data: 16.06.2013 r. /  ESKULAP / Poznań
-                        Organizator: Automatik & 5am Artists
-                        
+                    <div class="mediaTextContainer">        <!--COPY OK-->
+                        <div class="mediaText">
+                            <span class="eventHeader">BONOBO BAND LIVE <br/> relacja z koncertu</span><br/>
+                            Data: 16.06.2013 r. /  ESKULAP / Poznań
+                            Organizator: Automatik & 5am Artists
+                        </div>
                     </div>
                 </div>
             </a>
             <a class="fancybox vimeo" href="http://player.vimeo.com/video/99772237" target="blank">
                 <div class="mediaItem middleItem" id="two">
                     <div class="mediaTextContainer">        <!--COPY OK-->
-                        <span class="eventHeader">FORM B</span><br/>
-                        Eksperyment audiowizualny badający przestrzeń i formę ją wypełniającą.
-                        To jeden z przykładów animacji, których używamy do mappingu.
-                        
+                        <div class="mediaText">
+                            <span class="eventHeader">FORM B<br/> animacja</span><br/>
+                            Eksperyment audiowizualny badający przestrzeń i formę ją wypełniającą.
+                            To jeden z przykładów animacji, których używamy do mappingu.
+                        </div>
                     </div>
                 </div>
             </a>
             <a class="fancybox vimeo" href="http://player.vimeo.com/video/99772238" target="blank">
                 <div class="mediaItem middleItem" id="three">
-                    <div class="mediaTextContainer">        <!--COPY OK-->
-                        <span class="eventHeader">XX RECOLLECTED <br/> Instalacja multimedialna</span><br/>
-                        Projekt  ilustruje położenie człowieka w XX wieku.
-                        Łączymy animację, mapping oraz rzeźby kinetyczne.
+                    <div class="mediaTextContainer">   
+                        <div class="mediaText">
+                            <span class="eventHeader">XX RECOLLECTED <br/> Instalacja multimedialna</span><br/>
+                            Projekt  ilustruje położenie człowieka w XX wieku.
+                            Łączymy animację, mapping oraz rzeźby kinetyczne.
+                        </div>
                     </div>
                 </div>
             </a>
@@ -343,6 +357,11 @@ and open the template in the editor.
             <div class="clear"></div>
         </div>
         <div class="slide_container" id="contactUs">
+            <video autoplay loop poster="MAPKA_1200.jpg" id="bgvid">
+                <source src="content/videos/MAPKA_1200.webm" type="video/webm">
+                <source src="content/videos/MAPKA_1200.mp4" type="video/mp4">
+                <source src="content/videos/MAPKA_1200.ogv" type="video/ogg">
+            </video>
             <img src="content/images/logo.png" class="contactUsLogo"/>
             <div id="contactUsText">
                 <span class="bold">KONTAKT</span>
@@ -354,7 +373,7 @@ and open the template in the editor.
                     pawel@getwow.pl
                 </div>
                 <div class="personalData">
-                    <span class="bold">Kamil Caliński</span>
+                    <span class="bold">Kamil Caliński</span><br/>
                     +48 502 617 233
                     kamil@getwow.pl
                 </div>
@@ -364,7 +383,6 @@ and open the template in the editor.
                     00-714 Warszawa
                 </div>
             </div>
-            
         </div>
         <div id="imagesPreloader"></div>
     </body>

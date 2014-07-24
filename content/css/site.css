@@ -32,6 +32,11 @@
     src: url("../fonts/Mostra Nuova AltD Bold.otf") format('opentype')
 }
 
+html{
+    margin:0;
+    padding:0;
+}
+
 body{
     font-family: 'MostraNuovaB';
     padding: 0;
@@ -658,6 +663,7 @@ video#bgvid {
     cursor: pointer;
 }
 
+
 @media all and (max-width: 1450px) {
     
     #contactUs{
@@ -697,7 +703,7 @@ video#bgvid {
 }
 
 
-@media all and (max-width: 1220px) {
+@media screen and (max-width: 1220px) {
     
 /*    #contactUs{
         background: url('../../content/images/pattern2.png');
@@ -871,6 +877,257 @@ video#bgvid {
 @media all and (max-width: 375px) {
         .menu > li {
             margin: 0px 6.5px;
+        }
+        
+        .contactUsLogo {
+            width: 60%;
+        }
+}
+
+@media screen and (max-device-width: 600px) {
+
+        .eventItem {
+            background: none;
+            display: inline-block;
+            float: left;
+            height: 450px;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            margin:0;
+            padding:0;
+        }
+
+        .mediaItem{
+            background: none;
+            width: 100%;
+            float:left;
+            display:inline-block;
+            position:relative;
+            border:none;
+            margin:0;
+            padding:0;
+            height:450px;
+            text-align:center;
+        }
+        
+        
+        .eventTextContainer{
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        .mediaTextContainer{
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        #one.eventItem:after{
+            background:none;
+        }
+
+        #one.mediaItem {
+            background: url('../../content/images/media/media1hover.png')  no-repeat center center;
+             -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            opacity:1;
+        }
+        #two.mediaItem {
+            background: url('../../content/images/media/media2hover.png')  no-repeat center center;
+             -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            opacity:1;
+        }
+        #three.mediaItem {
+            background: url('../../content/images/media/media3hover.png')  no-repeat center center;
+             -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            opacity:1;
+        }
+        #four.mediaItem {
+            background: url('../../content/images/media/media4hover.png')  no-repeat center center;
+             -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            opacity:1;
+        }
+
+        
+        #one.eventItem {
+            background: url('../../content/images/event/event1hover.png')  no-repeat center center;
+             -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            opacity:1;
+        }
+        #two.eventItem {
+            background: url('../../content/images/event/event2hover.png')  no-repeat center center;
+             -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            opacity:1;
+        }
+        #three.eventItem {
+            background: url('../../content/images/event/event3hover.png')  no-repeat center center;
+             -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            opacity:1;
+        }
+        #four.eventItem {
+            background: url('../../content/images/event/event4hover.png')  no-repeat center center;
+             -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            opacity:1;
+        }
+        
+        #contactUsText {
+            width: 95%;
+        }
+        
+        .middleItem{
+            margin: 0;
+            padding:0;
+        }
+}
+
+
+@media screen and (max-device-width: 515px) {
+        #welcomeSlide {
+            height: 300px;
+        }
+        
+        .mainLogo {
+            width: 60%;
+            margin-bottom:70px;
+        }
+        
+        #aboutUsText {
+            font-size: 0.9em;
+            width: 77%;
+            line-height: 1.4;
+            margin-bottom:70px;
+        }
+        
+        #aboutUsHeader {
+            font-size: 60px;
+            width: 75%;
+            margin-top: 15px;
+            margin-bottom:15px;
+        }
+        
+        .menuAboutUsImg {
+            width: 95%;
+        }
+        
+        .menu > li {
+            margin: 0px 19.5px;
+        }
+        
+        .contactUsLogo {
+            width: 60%;
+        }
+}
+
+
+@media screen and (max-device-width: 465px) {
+        .menu > li {
+            margin: 0px 13.5px;
+        }
+        
+        .contactUsLogo {
+            width: 60%;
+        }
+        
+        #welcomeSlide{
+            background: url('../../content/images/staticMainBcg.png')  no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover; 
+            height:100%;
+            width:100%;
+        }
+        
+        #aboutUs{
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover; 
+            height:100%;
+            width:100%;
+        }
+        
+        #contactUs{
+            background: url('../../content/images/contactUsBcg.png')  no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover; 
+            height:auto;
+            width:100%;
+        }       
+        
+        #bgvid{
+            display:none;
+        }
+        
+        .menu{
+             margin: 2px 0px 0px 0px;
+        }
+        
+        .eventItem {
+            width:100%;
+            height:450px;
+            background: none;
+            margin:0;
+            padding:0;
+        }
+
+        .mediaItem{
+            width:100%;
+            height:450px;
+            background: none;
+            margin:0;
+            padding:0;
+        }
+        
+        #caseStudiesEvent{
+            width:100%;
+            height:500px;
+        }
+        
+        #caseStudiesMedia{
+            width:100%;
+            height:500px;
+        }
+}
+
+@media screen and (max-device-width: 405px) {
+        .menu > li {
+            margin: 0px 9.5px;
+        }
+        
+        .contactUsLogo {
+            width: 60%;
+        }
+}
+
+
+@media screen and (max-device-width: 375px) {
+        .menu > li {
+            margin: 0px 2.5px;
+            font-size: 18px;
         }
         
         .contactUsLogo {

@@ -183,7 +183,7 @@ video#bgvid {
     max-width: 1250px;
     width:80%;
     line-height: 1.7;
-    margin: -10px auto;
+    margin: -10px auto 50px auto;
     text-align: justify;
     text-shadow: 0.1em 0.1em #333;
 }
@@ -705,14 +705,7 @@ video#bgvid {
 
 @media screen and (max-width: 1220px) {
     
-/*    #contactUs{
-        background: url('../../content/images/pattern2.png');
-        width:100%;
-        height:74vh;
-        position:relative;
-    }
-    
-*/    .eventTextContainer{
+    .eventTextContainer{
         background-color: rgba(0, 0, 0, 0.2);
         position: absolute;
         bottom: 30px;
@@ -759,8 +752,6 @@ video#bgvid {
             float:left;
             display:inline-block;
             position:relative;
-            /*border-left:2px solid white;*/
-            /*border-right:2px solid white;*/
             height:70vh;
             text-align:center;
         }
@@ -788,8 +779,6 @@ video#bgvid {
             float:left;
             display:inline-block;
             position:relative;
-            /*border-left:2px solid white;*/
-            /*border-right:2px solid white;*/
             height:55vh;
             text-align:center;
         }
@@ -881,6 +870,91 @@ video#bgvid {
         
         .contactUsLogo {
             width: 60%;
+        }
+}
+
+@media screen and (max-device-width: 1350px) {
+        #contactUs{
+            background: url('../../content/images/contactUsBcg.png')  no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover; 
+        }
+        
+        .mediaItem{
+               width: 24.7%;
+               height:500px;
+        }
+        
+        .eventItem{
+            width: 24.7%;
+            height:500px;
+            text-align:center;
+        }
+
+        .mainLogo{
+            margin-bottom:200px;
+        }
+
+        #aboutUsText {
+            font-size: 0.9em;
+            width: 77%;
+            line-height: 1.4;
+            margin-bottom:170px;
+        }
+}
+
+
+@media screen and (max-device-width: 950px) {
+        #contactUs{
+            background: url('../../content/images/contactUsBcg.png')  no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover; 
+        }
+
+        .eventTextContainer {
+            padding: 5px 20px;
+            box-sizing: border-box;
+            height: 235px;
+            display: table;
+        }
+        .mediaTextContainer {
+            padding: 5px 20px;
+            box-sizing: border-box;
+            height: 165px;
+            display: table;
+        }
+        
+        #aboutUsText {
+            font-size: 0.9em;
+            width: 77%;
+            line-height: 1.4;
+            margin-bottom:200px;
+        }
+
+        .mainLogo{
+            margin-bottom:380px;
+        }
+
+        .mediaItem{
+               width: 24.6%;
+               height:500px;
+        }
+
+        #two.mediaItem{
+               margin-right:5px;
+        }
+         #two.eventItem{
+               margin-right:5px;
+        }
+        
+        .eventItem{
+            width: 24.6%;
+            height:500px;
+            text-align:center;
         }
 }
 

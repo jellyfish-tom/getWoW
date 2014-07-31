@@ -1208,3 +1208,172 @@ video#bgvid {
             width: 60%;
         }
 }
+
+
+
+
+/*IPAD STYLES*/
+
+//Retina iPad
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 2) {
+         #welcomeSlide{
+            background: url('../../content/images/staticMainBcg.png')  no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover; 
+            height:100%;
+            width:100%;
+        }
+        
+        #aboutUs{
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover; 
+            height:100%;
+            width:100%;
+        }
+        
+        #contactUs{
+            background: url('../../content/images/contactUsBcg.png')  no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover; 
+            height:auto;
+            width:100%;
+        }       
+        
+        #bgvid{
+            display:none;
+        }
+
+        .eventTextContainer {
+            padding: 5px 20px;
+            box-sizing: border-box;
+            height: 235px;
+            display: table;
+        }
+        .mediaTextContainer {
+            padding: 5px 20px;
+            box-sizing: border-box;
+            height: 165px;
+            display: table;
+        }
+        
+        #aboutUsText {
+            font-size: 0.9em;
+            width: 77%;
+            line-height: 1.4;
+            margin-bottom:200px;
+        }
+
+        .mainLogo{
+            margin-bottom:380px;
+        }
+
+        .mediaItem{
+               width: 24.6%;
+               height:500px;
+        }
+
+        #two.mediaItem{
+               margin-right:5px;
+        }
+         #two.eventItem{
+               margin-right:5px;
+        }
+        
+        .eventItem{
+            width: 24.6%;
+            height:500px;
+            text-align:center;
+        }
+}
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1) {
+    #welcomeSlide{
+            background: url('../../content/images/staticMainBcg.png')  no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover; 
+            height:100%;
+            width:100%;
+        }
+        
+        #aboutUs{
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover; 
+            height:100%;
+            width:100%;
+        }
+        
+        #contactUs{
+            background: url('../../content/images/contactUsBcg.png')  no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover; 
+            height:auto;
+            width:100%;
+        }       
+        
+        #bgvid{
+            display:none;
+        }
+
+        .eventTextContainer {
+            padding: 5px 20px;
+            box-sizing: border-box;
+            height: 235px;
+            display: table;
+        }
+        .mediaTextContainer {
+            padding: 5px 20px;
+            box-sizing: border-box;
+            height: 165px;
+            display: table;
+        }
+        
+        #aboutUsText {
+            font-size: 0.9em;
+            width: 77%;
+            line-height: 1.4;
+            margin-bottom:200px;
+        }
+
+        .mainLogo{
+            margin-bottom:380px;
+        }
+
+        .mediaItem{
+               width: 24.6%;
+               height:500px;
+        }
+
+        #two.mediaItem{
+               margin-right:5px;
+        }
+         #two.eventItem{
+               margin-right:5px;
+        }
+        
+        .eventItem{
+            width: 24.6%;
+            height:500px;
+            text-align:center;
+        }
+}
+
